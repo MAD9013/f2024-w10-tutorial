@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Forms Complete | W10 - Forms & Tables</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/forms-complete.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page" class="css-grid">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 9</span>
+            <span class="navbar__title">Forms &amp; Tables</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./forms.html" class="navbar__link">Forms</a>
+            </li>
+            <li>
+              <a
+                href="./forms-complete.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Forms Complete
+              </a>
+            </li>
+            <li>
+              <a href="./tables.html" class="navbar__link">Tables</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Forms</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <form action="/thank-you.html">
+            <h2>Sign Up</h2>
+            <fieldset>
+              <legend>User Information</legend>
+
+              <div class="form-grid">
+                <div class="form-grid__unit">
+                  <label for="first-name">First Name</label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    required
+                  />
+                </div>
+                <div class="form-grid__unit">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" required />
+                </div>
+                <div class="form-grid__unit">
+                  <label for="age">Age</label>
+                  <input type="number" id="age" name="age" min="0" value="18" />
+                </div>
+                <div class="form-grid__unit">
+                  <label for="experience">Experience</label>
+                  <input
+                    type="range"
+                    id="experience"
+                    name="experience"
+                    min="0"
+                    max="10"
+                  />
+                </div>
+                <div class="form-grid__unit radio-grid full">
+                  <p class="label full">Marital Status</p>
+                  <div class="radio-grid__unit">
+                    <input type="radio" name="marital-status" id="single" />
+                    <label for="single">Single</label>
+                  </div>
+                  <div class="radio-grid__unit">
+                    <input
+                      type="radio"
+                      name="marital-status"
+                      id="relationship"
+                    />
+                    <label for="relationship">Relationship</label>
+                  </div>
+                  <div class="radio-grid__unit">
+                    <input type="radio" name="marital-status" id="domestic" />
+                    <label for="domestic">Domestic Partnership</label>
+                  </div>
+                  <div class="radio-grid__unit">
+                    <input type="radio" name="marital-status" id="married" />
+                    <label for="married">Married</label>
+                  </div>
+                </div>
+                <div class="form-grid__unit full">
+                  <label for="biography">Biography</label>
+                  <textarea id="biography" name="biography"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Contact Information</legend>
+              <div class="form-grid">
+                <div class="form-grid__unit">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-grid__unit">
+                  <label for="tel">Phone Number</label>
+                  <input type="tel" id="tel" name="tel" required />
+                </div>
+
+                <div class="form-grid__unit">
+                  <label for="address">Address</label>
+                  <input type="text" id="address" name="address" required />
+                </div>
+
+                <div class="form-grid__unit">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" required />
+                </div>
+
+                <div class="form-grid__unit">
+                  <label for="province">Province</label>
+                  <input
+                    type="text"
+                    id="province"
+                    name="province"
+                    list="provinces"
+                    required
+                  />
+                  <datalist id="provinces">
+                    <option value="Alberta"></option>
+                    <option value="British Columbia"></option>
+                    <option value="Manitoba"></option>
+                    <option value="New Brunswick"></option>
+                    <option value="Newfoundland and Labrador"></option>
+                    <option value="Northwest Territories"></option>
+                    <option value="Nova Scotia"></option>
+                    <option value="Nunavut"></option>
+                    <option value="Ontario"></option>
+                    <option value="Prince Edward Island"></option>
+                    <option value="Quebec"></option>
+                    <option value="Saskatchewan"></option>
+                    <option value="Yukon"></option>
+                  </datalist>
+                </div>
+
+                <div class="form-grid__unit">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <optgroup label="Asia">
+                      <option value="china">China</option>
+                      <option value="japan">Japan</option>
+                      <option value="philippines">Philippines</option>
+                      <option value="south-korea">South Korea</option>
+                    </optgroup>
+                    <optgroup label="North America">
+                      <option selected value="canada">Canada</option>
+                      <option value="mexico">Mexico</option>
+                      <option value="united-states">United States</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                      <option value="france">France</option>
+                      <option value="germany">Germany</option>
+                      <option value="ireland">Ireland</option>
+                      <option value="spain">Spain</option>
+                      <option value="united-kingdom">United Kingdom</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Create Account</legend>
+              <div class="form-grid">
+                <div class="form-grid__unit full">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" name="username" required />
+                </div>
+                <div class="form-grid__unit">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="new-password"
+                    required
+                  />
+                </div>
+                <div class="form-grid__unit">
+                  <label for="password-confirm">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="password-confirm"
+                    name="password-confirm"
+                    required
+                  />
+                </div>
+                <div class="form-grid__unit full checkbox-wrap">
+                  <input type="checkbox" id="permission" name="permission" />
+                  <label for="permission">
+                    I grant permission to collect my data.
+                  </label>
+                </div>
+                <div class="form-grid__unit full">
+                  <button class="btn" type="submit">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 10</span>
+            <span class="footer__title">Forms &amp; Tables</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/f2024/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

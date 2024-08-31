@@ -1,0 +1,131 @@
+:root {
+  accent-color: var(--color-green);
+}
+
+form {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow--subtle);
+}
+
+form .btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+fieldset {
+  display: contents;
+}
+
+legend {
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-blue);
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+label,
+.label {
+  display: block;
+  margin-block-end: 0.25rem;
+  font-weight: 600;
+}
+
+/*
+This selector is more annoying to write,
+but is les specific, so makes it easier
+to overwrite later if we need to.
+*/
+input:where(
+    [type="text"],
+    [type="number"],
+    [type="email"],
+    [type="tel"],
+    [type="date"],
+    [type="time"],
+    [type="password"],
+    [type="search"]
+  ),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 0.0625rem solid #ddd;
+  border-block-end: 0.0625rem solid var(--color-blue);
+}
+
+[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+[type="checkbox"],
+[type="radio"],
+[type="checkbox"] + label,
+[type="radio"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-weight: 400;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.radio-grid {
+  display: grid;
+  --cols: 1;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 1rem;
+}
+
+.checkbox-wrap {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.checkbox-wrap input {
+  margin-inline-end: 0.25rem;
+}
+
+@media only screen and (min-width: 45em) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .full {
+    grid-column: 1 / -1;
+  }
+
+  .radio-grid {
+    --cols: 2;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.25rem 0.5rem #000a;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.card:hover,
+.card:focus {
+  translate: 0 -1.5rem;
+}

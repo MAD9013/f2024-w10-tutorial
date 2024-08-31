@@ -1,0 +1,55 @@
+// Provinces
+Alberta
+British Columbia
+Manitoba
+New Brunswick
+Newfoundland and Labrador
+Northwest Territories
+Nova Scotia
+Nunavut
+Ontario
+Prince Edward Island
+Quebec
+Saskatchewan
+Yukon
+
+// Countries
+
+/ Asia
+China
+china
+
+Japan
+japan
+
+Philippines
+philippines
+
+South Korea
+south-korea
+
+/ North America
+Canada
+canada
+
+Mexico
+mexico
+
+United States
+united-states
+
+/ Europe
+France
+france
+
+Germany
+germany
+
+Ireland
+ireland
+
+Spain
+spain
+
+United Kingdom
+united-kingdom
