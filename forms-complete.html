@@ -102,7 +102,7 @@
           <form action="/thank-you.html">
             <h2>Sign Up</h2>
             <fieldset>
-              <legend>User Information</legend>
+              <legend class="heading-5">User Information</legend>
 
               <div class="form-grid">
                 <div class="form-grid__unit">
@@ -132,8 +132,8 @@
                     max="10"
                   />
                 </div>
-                <div class="form-grid__unit radio-grid full">
-                  <p class="label full">Marital Status</p>
+                <fieldset class="form-grid__unit radio-grid full">
+                  <legend class="label full">Marital Status</legend>
                   <div class="radio-grid__unit">
                     <input type="radio" name="marital-status" id="single" />
                     <label for="single">Single</label>
@@ -154,7 +154,7 @@
                     <input type="radio" name="marital-status" id="married" />
                     <label for="married">Married</label>
                   </div>
-                </div>
+                </fieldset>
                 <div class="form-grid__unit full">
                   <label for="biography">Biography</label>
                   <textarea id="biography" name="biography"></textarea>
@@ -162,7 +162,7 @@
               </div>
             </fieldset>
             <fieldset>
-              <legend>Contact Information</legend>
+              <legend class="heading-5">Contact Information</legend>
               <div class="form-grid">
                 <div class="form-grid__unit">
                   <label for="email">Email</label>
@@ -237,7 +237,7 @@
             </fieldset>
 
             <fieldset>
-              <legend>Create Account</legend>
+              <legend class="heading-5">Create Account</legend>
               <div class="form-grid">
                 <div class="form-grid__unit full">
                   <label for="username">Username</label>
@@ -263,7 +263,12 @@
                   />
                 </div>
                 <div class="form-grid__unit full checkbox-wrap">
-                  <input type="checkbox" id="permission" name="permission" />
+                  <input
+                    type="checkbox"
+                    id="permission"
+                    name="permission"
+                    required
+                  />
                   <label for="permission">
                     I grant permission to collect my data.
                   </label>

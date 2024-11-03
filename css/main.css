@@ -326,7 +326,8 @@ h4,
 h5,
 .heading-5 {
   font-size: 1.125rem;
-  border-block-end: 0.0625rem solid var(--color-blue);
+  color: var(--color-blue);
+  font-weight: bold;
 }
 
 h6 {
